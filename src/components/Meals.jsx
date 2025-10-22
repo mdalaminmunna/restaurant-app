@@ -6,7 +6,7 @@ export default function Meals() {
 
   useEffect(() => {
     async function fetchMeals() {
-      const response = await fetch("http://localhost:3000/meals");
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/meals`);
 
       if (!response.ok) {
         // ...
